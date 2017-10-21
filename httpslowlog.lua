@@ -16,8 +16,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --]]
 
 -- Chisel description
-description = "Show a log of all HTTP requests, select latency";
-short_description = "HTTP requests log";
+description = "Show a log of all HTTP requests slower than latency max_latency";
+short_description = "HTTP slow requests log";
 category = "Application";
 args = {}
 
@@ -26,7 +26,7 @@ args =
   {
     {
       name = "max_latency",
-      description = "Show requests >= max_latency",
+      description = "Show requests with latency >= max_latency",
       argtype = "int",
     },
   }
